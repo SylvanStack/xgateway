@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: xgateway
+server:
+  port: 8888
