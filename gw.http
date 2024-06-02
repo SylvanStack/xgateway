@@ -5,7 +5,31 @@ GET http://localhost:8888/hello
 GET http://localhost:8888/gw
 
 ### POST xrpc
-POST http://localhost:8888/gw/com.yuanstack.xrpc.demo.api.service.UserService?mock=true
+POST http://localhost:8888/gw/xrpc/com.yuanstack.xrpc.demo.api.service.UserService
+Content-Type: application/json
+
+{
+  "service": "com.yuanstack.xrpc.demo.api.service.UserService",
+  "methodSign": "findById@1_java.lang.Integer",
+  "args": [
+    100
+  ]
+}
+
+### POST direct
+POST http://localhost:8888/gw/direct/com.yuanstack.xrpc.demo.api.service.UserService
+Content-Type: application/json
+
+{
+  "service": "com.yuanstack.xrpc.demo.api.service.UserService",
+  "methodSign": "findById@1_java.lang.Integer",
+  "args": [
+    100
+  ]
+}
+
+### POST direct backend
+POST http://localhost:8888/gw/direct/com.yuanstack.xrpc.demo.api.service.UserService?backend=http://localhost:8081/xrpc
 Content-Type: application/json
 
 {
