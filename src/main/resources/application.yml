@@ -3,3 +3,6 @@ spring:
     name: xgateway
 server:
   port: 8888
+xregistry:
+  enabled: true
+  servers: http://localhost:8484

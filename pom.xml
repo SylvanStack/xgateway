@@ -34,6 +34,17 @@
             <scope>test</scope>
         </dependency>
         <dependency>
+            <groupId>io.github.sylvanstack</groupId>
+            <artifactId>xrpc-core</artifactId>
+            <version>1.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-test</artifactId>
             <scope>test</scope>
