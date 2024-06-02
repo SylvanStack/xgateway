@@ -1,0 +1,15 @@
+### GET hello
+GET http://localhost:8888/hello
+
+### GET gw 1
+GET http://localhost:8888/gw
+
+### POST xrpc
+POST http://localhost:8888/gw/com.yuanstack.xrpc.demo.api.service.UserService
+Content-Type: application/json
+
+{
+  "service":"com.yuanstack.xrpc.demo.api.service.UserService",
+  "methodSign":"findById@1_java.lang.Integer",
+  "args":[100]
+}
